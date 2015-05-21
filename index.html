@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="stylesheet.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>Pokémon</h1>
+<div id="a"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $.get("http://daniel.teknikprogrammet.org/pokedex/pokedex.php", function(data){
+            var html = "<div class='container'>"+"<div class='row'>";
+            for(var i = 0; i < data.length;i++)
+            {
+                html += "<div class='col-lg-4 wrapper'>"+"<img src='"+data[i].bild+"'>"+"<p>"+data[i].namn+"</br>"+
+                        "Index: "+data[i].pokemon_id+"</p>"+"</div>";
+            }
+            html += "</div>"+"</div>"+"</div>";
+
+            $("#a").html(html);  //Lägga in html
+
+        });
+    });
+</script>
+
+</body>
+</html>

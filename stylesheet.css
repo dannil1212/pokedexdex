@@ -1,0 +1,8 @@
+.wrapper{
+    border: solid #000000;
+    float: left;
+}
+
+.wrapper p{
+    padding: 2%;
+}
