@@ -1,8 +1,20 @@
 .wrapper{
-    border: solid #000000;
     float: left;
+    width: 30%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    padding-left: 0%;
 }
-
-.wrapper p{
-    padding: 2%;
+.megaWrapper{
+    padding-left: 5%;
+}
+h1{
+    text-align: center;
+    margin-bottom: 2%;
+}
+.scale{
+    height: 80%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
